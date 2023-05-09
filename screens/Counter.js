@@ -11,7 +11,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PopupModal from '../components/PopupModal';
-import ManuanllyCounter from '../components/ManuallyCounter';
+import ManuallyCounter from '../components/ManuallyCounter';
 // import { Ionicons} from 'react-native-vector-icons';
 // import { Button } from 'react-native-elements';
 // import { IconButton } from 'react-native-paper';
@@ -295,7 +295,7 @@ elevation: 4}}>
    subtitle={'Steps'}
    title={stepCount}
    />
-   {/* <ManuanllyCounter visible={subscription} tallyLatestSteps={tallyLatestSteps}/> */}
+   { <ManuallyCounter visible={subscription} tallyLatestSteps={tallyLatestSteps}/> }
    <PopupModal shareToken={shareToken}/>
 
    <TouchableOpacity
