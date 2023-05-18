@@ -1,7 +1,7 @@
 import getSpikesFromAccelerometer from '../utils/StepCalculator';
 import {createObjectCsvWriter} from 'csv-writer';
 
-it ("Should Show 60 Steps Taken", ()=>{
+it ("Should Show 32 Steps Taken", ()=>{
 
 
 let steps = [];
@@ -46,12 +46,12 @@ accelerometerReadings.push([{"time":1642432187015,"value":8.532964076634846},{"t
 //     .then(() => console.log('Wrote CSV successfully'));
 
 accelerometerReadings.forEach((recentAccelerationData)=>{
-    console.log("New Previous Value from calling program: "+previousValue);
+    // console.log("New Previous Value from calling program: "+previousValue);
     ({spikes, previousHighPointTime, wasGoingUp} = getSpikesFromAccelerometer({recentAccelerationData, threshold:11, previousValue, previousHighPointTime, wasGoingUp}));
     previousValue = recentAccelerationData[recentAccelerationData.length-1].value;
-    console.log("New Previous High Point Time from calling program: "+previousHighPointTime);
+    // console.log("New Previous High Point Time from calling program: "+previousHighPointTime);
     steps = steps.concat(spikes);
-    console.log("Steps: "+steps.length);
+    // console.log("Steps: "+steps.length);
     
 });
 
