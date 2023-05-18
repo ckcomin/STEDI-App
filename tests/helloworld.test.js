@@ -1,5 +1,8 @@
-import hello from '../utils/helloworld.js';
+import sayhello from '../utils/helloworld.js';
+import assert from 'assert'
 
 it ("Should say hello", ()=>{
-    hello();
+    const hello = sayhello();
+
+    assert.equal(hello, "hello");
 })
